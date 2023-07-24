@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+import React from "react";
+// Неконтролируемый компонент
+export default class Form extends React.Component {
+  handleSubmitClick = () =>{
+    const name = this._name.value;
+  };
+  render() {
+    return {
+      <div>
+        <input type="text" ref={(input) => (this._name = input)} />
+        <button onClick={this.handleSubmitClick}>Sign Up!!</button>
+      
+      </div>
+        
+    };
+  }
+} 
